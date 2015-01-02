@@ -5,12 +5,9 @@ package:
 source:
   fn: fiat-1.4.0.tar.gz
   url: https://bitbucket.org/fenics-project/fiat/downloads/fiat-1.4.0.tar.gz
-  #md5: 
 
-# build:
-  # If this is a new build for the same version, increment the build
-  # number. If you do not include this key, it defaults to 0.
-  # number: 1
+build:
+  number: 7
 
 requirements:
   build:
@@ -21,16 +18,8 @@ requirements:
     - scientificpython
 
 test:
-  # Python imports
   imports:
     - FIAT
-
-  # You can also put a file called run_test.py in the recipe that will be run
-  # at test time.
-
-  # requires:
-    # Put any additional test requirements here.  For example
-    # - nose
 
 about:
   home: http://fenicsproject.org/
