@@ -1,0 +1,40 @@
+package:
+  name: instant
+  version: "1.4.0"
+
+source:
+  fn: instant-1.4.0.tar.gz
+  url: https://bitbucket.org/fenics-project/instant/downloads/instant-1.4.0.tar.gz
+  #md5: 
+
+# build:
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  # number: 1
+
+requirements:
+  build:
+    - python
+  run:
+    - python
+
+test:
+  # Python imports
+  imports:
+    - instant
+
+  # You can also put a file called run_test.py in the recipe that will be run
+  # at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: http://www.fenicsproject.org
+  license: BSD License or GNU Library or Lesser General Public License v3 (LGPLv3)
+  summary: 'Instant Inlining of C/C++ in Python'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml
