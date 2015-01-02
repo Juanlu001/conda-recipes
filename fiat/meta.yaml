@@ -7,7 +7,7 @@ source:
   url: https://bitbucket.org/fenics-project/fiat/downloads/fiat-1.4.0.tar.gz
 
 build:
-  number: 7
+  number: 8
 
 requirements:
   build:

@@ -7,7 +7,7 @@ source:
   url: https://bitbucket.org/fenics-project/instant/downloads/instant-1.4.0.tar.gz
 
 build:
-  number: 7
+  number: 8
 
 requirements:
   build:
@@ -19,6 +19,7 @@ requirements:
     - libxml2
     - zlib
     - cmake
+    - swig
 
 test:
   imports:

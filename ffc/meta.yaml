@@ -7,12 +7,13 @@ source:
   url: https://bitbucket.org/fenics-project/ffc/downloads/ffc-1.4.0.tar.gz
 
 build:
-  number: 7
+  number: 8
 
 requirements:
   build:
     - python
     - numpy <1.9
+    - swig
   run:
     - python
     - numpy <1.9
