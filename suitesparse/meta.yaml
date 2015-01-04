@@ -1,15 +1,13 @@
 package:
   name: suitesparse
-  version: "4.4.1"
+  version: "4.2.1"
 
 source:
-  fn: SuiteSparse-4.4.1.tar.gz
-  url: http://faculty.cse.tamu.edu/davis/SuiteSparse/SuiteSparse-4.4.1.tar.gz
+  fn: SuiteSparse-4.2.1.tar.gz
+  url: http://faculty.cse.tamu.edu/davis/SuiteSparse/SuiteSparse-4.2.1.tar.gz
 
   patches:
-    - install.patch
-    - mkl.patch
-    - gcc.patch
+    - config.patch
 
 build:
   number: 0

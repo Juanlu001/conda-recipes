@@ -6,17 +6,22 @@ source:
   fn: dolfin-1.4.0.tar.gz
   url: https://bitbucket.org/fenics-project/dolfin/downloads/dolfin-1.4.0.tar.gz
 
+  patches:
+    - amd_required.patch
+
 build:
-  number: 8
+  number: 9
 
 requirements:
   build:
     - cmake
     - python
     - numpy <1.9
+    - mkl
     - ffc
     - ply
     - boost
+    - suitesparse <=4.2.1
 
   run:
     - python
@@ -25,6 +30,7 @@ requirements:
     - ufl
     - ply
     - boost
+    - suitesparse <=4.2.1
 
 test:
   imports:
