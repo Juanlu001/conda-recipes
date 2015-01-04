@@ -1,0 +1,29 @@
+package:
+  name: suitesparse
+  version: "4.4.1"
+
+source:
+  fn: SuiteSparse-4.4.1.tar.gz
+  url: http://faculty.cse.tamu.edu/davis/SuiteSparse/SuiteSparse-4.4.1.tar.gz
+
+  patches:
+    - install.patch
+    - mkl.patch
+    - gcc.patch
+
+build:
+  number: 0
+
+requirements:
+  build:
+    - python
+    - mkl
+  run:
+    - python
+    - mkl
+
+about:
+  home: http://faculty.cse.tamu.edu/davis/suitesparse.html
+  license: GPLv2 and LGPLv2.1
+  summary: 'A suite of sparse matrix software'
+

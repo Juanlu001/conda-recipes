@@ -1,0 +1,19 @@
+--- SuiteSparse_config/SuiteSparse_config.mk.old	2015-01-04 11:09:28.581838569 +0100
++++ SuiteSparse_config/SuiteSparse_config.mk	2015-01-04 13:42:08.226165194 +0100
+@@ -119,12 +119,12 @@
+ # naming the BLAS and LAPACK library (*.a or *.so) files.
+ 
+ # This is probably slow ... it might connect to the Standard Reference BLAS:
+-  BLAS = -lblas -lgfortran
+-  LAPACK = -llapack
++# BLAS = -lblas -lgfortran
++# LAPACK = -llapack
+ 
+ # MKL 
+-# BLAS = -Wl,--start-group $(MKLROOT)/lib/intel64/libmkl_intel_lp64.a $(MKLROOT)/lib/intel64/libmkl_core.a $(MKLROOT)/lib/intel64/libmkl_intel_thread.a -Wl,--end-group -lpthread -lm
+-# LAPACK = 
++  BLAS = -Wl,--start-group $(MKLROOT)/lib/libmkl_intel_lp64.so $(MKLROOT)/lib/libmkl_core.so $(MKLROOT)/lib/libmkl_intel_thread.so -Wl,--end-group -liomp5 -lpthread -lm
++  LAPACK = 
+ 
+ # ACML
+ # BLAS = -lacml -lgfortran

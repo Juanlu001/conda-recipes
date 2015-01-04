@@ -1,0 +1,11 @@
+--- SuiteSparse_config/SuiteSparse_config.mk.old	2015-01-04 11:09:28.581838569 +0100
++++ SuiteSparse_config/SuiteSparse_config.mk	2015-01-04 11:10:47.618293786 +0100
+@@ -315,7 +315,7 @@
+ #------------------------------------------------------------------------------
+ 
+ # Using default compilers:
+-# CC = gcc
++CC = gcc
+ # CF = $(CFLAGS) -O3 -fexceptions
+ 
+ # alternatives:
