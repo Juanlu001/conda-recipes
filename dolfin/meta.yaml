@@ -10,7 +10,7 @@ source:
     - amd_required.patch
 
 build:
-  number: 10
+  number: 9
 
 requirements:
   build:
@@ -22,9 +22,6 @@ requirements:
     - ply
     - boost
     - suitesparse <=4.2.1
-    - qt
-    - vtk
-    - sphinx
 
   run:
     - python
@@ -34,8 +31,6 @@ requirements:
     - ply
     - boost
     - suitesparse <=4.2.1
-    - qt
-    - vtk
 
 test:
   imports:
