@@ -1,0 +1,37 @@
+--- SuiteSparse_config/SuiteSparse_config.mk.old	2015-01-04 15:52:59.817086399 +0100
++++ SuiteSparse_config/SuiteSparse_config.mk	2015-01-04 15:56:14.705096933 +0100
+@@ -82,8 +82,8 @@
+ # LIB = -lm
+ 
+ # For "make install"
+-INSTALL_LIB = /usr/local/lib
+-INSTALL_INCLUDE = /usr/local/include
++INSTALL_LIB = $(LIBRARY_PATH)
++INSTALL_INCLUDE = $(INCLUDE_PATH)
+ 
+ # Which version of MAKE you are using (default is "make")
+ # MAKE = make
+@@ -106,8 +106,12 @@
+ # naming the BLAS and LAPACK library (*.a or *.so) files.
+ 
+ # This is probably slow ... it might connect to the Standard Reference BLAS:
+-BLAS = -lblas -lgfortran
+-LAPACK = -llapack
++# BLAS = -lblas -lgfortran
++# LAPACK = -llapack
++
++# MKL 
++BLAS = -Wl,--start-group $(MKLROOT)/lib/libmkl_intel_lp64.so $(MKLROOT)/lib/libmkl_core.so $(MKLROOT)/lib/libmkl_intel_thread.so -Wl,--end-group -liomp5 -lpthread -lm
++LAPACK = 
+ 
+ # NOTE: this next option for the "Goto BLAS" has nothing to do with a "goto"
+ # statement.  Rather, the Goto BLAS is written by Dr. Kazushige Goto.
+@@ -256,7 +260,7 @@
+ #------------------------------------------------------------------------------
+ 
+ # Using default compilers:
+-# CC = gcc
++CC = gcc
+ # CF = $(CFLAGS) -O3 -fexceptions
+ 
+ # alternatives:
