@@ -1,0 +1,10 @@
+--- cmake/modules/FindSLEPc.cmake.old	2015-01-06 14:02:07.455385640 +0100
++++ cmake/modules/FindSLEPc.cmake	2015-01-06 14:02:36.111385981 +0100
+@@ -59,6 +59,7 @@
+ list(APPEND slepc_dir_locations "/opt/local/lib/petsc")    # Macports
+ list(APPEND slepc_dir_locations "/usr/local/lib/slepc")
+ list(APPEND slepc_dir_locations "$ENV{HOME}/slepc")
++list(APPEND slepc_dir_locations "$ENV{SP_DIR}/slepc")  # Python location
+ 
+ # Add other possible locations for SLEPC_DIR
+ set(_SYSTEM_LIB_PATHS "${CMAKE_SYSTEM_LIBRARY_PATH};${CMAKE_PLATFORM_IMPLICIT_LINK_DIRECTORIES}")

@@ -7,21 +7,24 @@ source:
   url: https://bitbucket.org/fenics-project/dolfin/downloads/dolfin-1.4.0.tar.gz
 
   patches:
-    - amd_required.patch
+    - find_petsc.patch
+    - find_slepc.patch
 
 build:
-  number: 9
+  number: 11
 
 requirements:
   build:
     - cmake
     - python
+    - sphinx
     - numpy <1.9
-    - mkl
     - ffc
     - ply
     - boost
-    - suitesparse <=4.2.1
+    - petsc
+    - petsc4py
+    - slepc
 
   run:
     - python
@@ -30,7 +33,9 @@ requirements:
     - ufl
     - ply
     - boost
-    - suitesparse <=4.2.1
+    - petsc
+    - petsc4py
+    - slepc
 
 test:
   imports:

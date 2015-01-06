@@ -1,0 +1,10 @@
+--- cmake/modules/FindPETSc.cmake.old	2015-01-06 13:09:22.799347973 +0100
++++ cmake/modules/FindPETSc.cmake	2015-01-06 13:16:10.507352826 +0100
+@@ -67,6 +67,7 @@
+ list(APPEND petsc_dir_locations "/opt/local/lib/petsc")     # Macports location
+ list(APPEND petsc_dir_locations "/usr/local/lib/petsc")     # User location
+ list(APPEND petsc_dir_locations "$ENV{HOME}/petsc")         # User location
++list(APPEND petsc_dir_locations "$ENV{SP_DIR}/petsc")       # Python location
+ 
+ # Add other possible locations for PETSC_DIR
+ set(_SYSTEM_LIB_PATHS "${CMAKE_SYSTEM_LIBRARY_PATH};${CMAKE_PLATFORM_IMPLICIT_LINK_DIRECTORIES}")
