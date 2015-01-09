@@ -1,10 +1,10 @@
 package:
   name: slepc
-  version: "3.5.1"
+  version: "3.4.4"
 
 source:
-  fn: slepc-3.5.1.tar.gz
-  url: http://www.grycap.upv.es/slepc/download/distrib/slepc-3.5.1.tar.gz#egg=slepc-3.5.1
+  fn: slepc-3.4.4.tar.gz
+  url: http://www.grycap.upv.es/slepc/download/distrib/slepc-3.4.4.tar.gz#egg=slepc-3.4.4
 
 build:
   number: 1
@@ -12,15 +12,11 @@ build:
 requirements:
   build:
     - python
-    - petsc
+    - petsc <=3.4.5
 
   run:
     - python
-    - petsc
-
-test:
-  imports:
-    - slepc
+    - petsc <=3.4.5
 
 about:
   home: http://www.grycap.upv.es/slepc/

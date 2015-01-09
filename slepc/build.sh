@@ -1,6 +1,8 @@
 #!/bin/bash
 
-$PYTHON setup.py install
+./configure --prefix=$PREFIX
+make SLEPC_DIR=$PWD PETSC_DIR=$PREFIX PETSC_ARCH=arch-installed-petsc
+make SLEPC_DIR=$PWD PETSC_DIR=$PREFIX PETSC_ARCH=arch-installed-petsc install
 
 # Add more build steps here, if they are necessary.
 

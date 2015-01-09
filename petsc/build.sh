@@ -1,7 +1,8 @@
 #!/bin/bash
 
-export PETSC_CONFIGURE_OPTIONS="--with-blas-lapack-dir=$LIBRARY_PATH --download-amd --download-suitesparse"
-$PYTHON setup.py install
+./configure --prefix=$PREFIX --with-blas-lapack-dir=$LIBRARY_PATH --download-amd --download-umfpack
+make
+make install
 
 # Add more build steps here, if they are necessary.
 

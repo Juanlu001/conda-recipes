@@ -7,11 +7,10 @@ source:
   url: https://bitbucket.org/fenics-project/dolfin/downloads/dolfin-1.4.0.tar.gz
 
   patches:
-    - find_petsc.patch
-    - find_slepc.patch
+    - fix_find_scotch.patch
 
 build:
-  number: 11
+  number: 10
 
 requirements:
   build:
@@ -22,9 +21,9 @@ requirements:
     - ffc
     - ply
     - boost
-    - petsc
-    - petsc4py
-    - slepc
+    - petsc <=3.4.5
+    - petsc4py <=3.4
+    - slepc <=3.4.4
 
   run:
     - python
@@ -33,9 +32,9 @@ requirements:
     - ufl
     - ply
     - boost
-    - petsc
-    - petsc4py
-    - slepc
+    - petsc <=3.4.5
+    - petsc4py <=3.4
+    - slepc <=3.4.4
 
 test:
   imports:
