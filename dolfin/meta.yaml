@@ -7,10 +7,11 @@ source:
   url: https://bitbucket.org/fenics-project/dolfin/downloads/dolfin-1.4.0.tar.gz
 
   patches:
+    - conditional_cholmod.patch
     - fix_find_scotch.patch
 
 build:
-  number: 12
+  number: 13
 
 requirements:
   build:
