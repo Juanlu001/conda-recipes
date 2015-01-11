@@ -10,7 +10,7 @@ source:
     - fix_find_scotch.patch
 
 build:
-  number: 11
+  number: 12
 
 requirements:
   build:
@@ -18,6 +18,8 @@ requirements:
     - python
     - sphinx
     - numpy <1.9
+    - vtk
+    - qt
     - ffc
     - ply
     - boost
@@ -28,6 +30,8 @@ requirements:
   run:
     - python
     - numpy <1.9
+    - vtk
+    - qt
     - ffc
     - ufl
     - ply
