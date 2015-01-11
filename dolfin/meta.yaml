@@ -11,7 +11,7 @@ source:
     - fix_find_scotch.patch
 
 build:
-  number: 14
+  number: 15
 
 requirements:
   build:
@@ -24,6 +24,7 @@ requirements:
     - ffc
     - ply
     - boost
+    - eigen3
     - petsc <=3.4.5
     - petsc4py <=3.4
     - slepc <=3.4.4
@@ -37,6 +38,7 @@ requirements:
     - ufl
     - ply
     - boost
+    - eigen3
     - petsc <=3.4.5
     - petsc4py <=3.4
     - slepc <=3.4.4

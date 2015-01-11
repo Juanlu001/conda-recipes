@@ -7,7 +7,7 @@ source:
   url: https://bitbucket.org/fenics-project/ufl/downloads/ufl-1.4.0.tar.gz
 
 build:
-  number: 8
+  number: 9
 
 requirements:
   build:

@@ -7,7 +7,7 @@ source:
   url: https://sourcesup.renater.fr/frs/download.php/4570/ScientificPython-2.9.4.tar.gz
 
 build:
-  number: 8
+  number: 9
 
 requirements:
   build:
