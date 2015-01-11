@@ -1,6 +1,11 @@
 #!/bin/bash
 
-./configure --prefix=$PREFIX --with-blas-lapack-dir=$LIBRARY_PATH --download-amd --download-umfpack
+./configure \
+  --prefix=$PREFIX \
+  --with-blas-lapack-dir=$LIBRARY_PATH \
+  --download-amd \
+  --download-umfpack \
+  --with-shared-libraries
 make
 make install
 

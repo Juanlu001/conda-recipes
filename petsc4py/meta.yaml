@@ -3,15 +3,17 @@ package:
   version: "3.4"
 
 source:
-  fn: petsc4py-3.4.tar.gz
-  url: https://bitbucket.org/petsc/petsc4py/downloads/petsc4py-3.4.tar.gz
+  git_url: https://bitbucket.org/petsc/petsc4py/
+  git_tag: maint-3.4
+
 
 build:
-  number: 3
+  number: 4
 
 requirements:
   build:
     - python
+    - cython
     - petsc <=3.4.5
 
   run:
